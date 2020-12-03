@@ -1,0 +1,42 @@
+mixin navItem (content, icon, active)
+    li(class=`${active ? "active" : ""}`)
+        a(href="#")
+            i(class=`${icon}`)
+            = content
+
+doctype html
+html
+    head
+        title Dashboard
+        link(rel="preconnect", href="https://fonts.gstatic.com")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;0,700;1,400&display=swap")
+        link(rel="stylesheet", href="https://2.cdn.wisboo.com/fonts/icons-wisboo/style.css")
+        link(rel="stylesheet", href="../../styles/dashboard.style.css")
+    body
+        .dashboard
+            aside.dashboard-menu
+                .dashboard-menu__logo
+                    img(src="../../assets/logo.png")
+                .dashboard-menu__nav
+                    nav
+                        ul
+                            +navItem("Dashboard", "icon-apps---material", "active")
+                            +navItem("Cards", "icon-credit_card---material")
+                            +navItem("Statics", "icon-poll---material")
+                            +navItem("Premium", "icon-bookmark---material")
+                            +navItem("Profile", "icon-Usuario")
+                            +navItem("Settings", "icon-Configuracion-Relleno")
+                .dashboard-menu__card
+                    .card-header
+                        h4.
+                            Use our Premium #[br]
+                            features now
+                    .card-img
+                        img(src="../../assets/car.png")
+                    .card-cta
+                        .card-cta__wrapper
+                            h4 Get premium
+            main.dashboard-main
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sit dolore iusto similique labore itaque nesciunt quisquam officia? Nulla, praesentium.
+            section.dashboard-reports
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit mollitia ipsam nostrum, dolore a adipisci asperiores, beatae corrupti quidem officia facere laudantium, quis tenetur quaerat quas? Iusto, id nemo? Eum explicabo vero assumenda voluptas deleniti magni ratione ducimus cumque excepturi.

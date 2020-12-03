@@ -1,0 +1,64 @@
+mixin navItem(item)
+    li
+        a(href="#")= item
+
+mixin inputGroup (category, index)
+    .input-group
+        input(type="checkbox" id=`check-${index}`)
+        label(for=`check-${index}`)= category
+
+mixin product(product)
+    .product-card
+        img(src=`../../assets/${product.img}`)
+        h5= product.name
+        h6=`$${product.price}`
+
+
+doctype html
+html
+    head
+        title NOMADS
+        link(rel="preconnect", href="https://fonts.gstatic.com")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;0,700;1,400&display=swap")
+        link(rel="stylesheet", href="https://2.cdn.wisboo.com/fonts/icons-wisboo/style.css")
+        link(rel="stylesheet", href="../../styles/nomads.style.css")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+    body
+        .nomads
+            nav.nomads-nav
+                .nomads-nav__list
+                    ul
+                        +navItem("inicio")
+                        +navItem("comprar")
+                        +navItem("blog")
+                .nomads-nav__logo
+                    h1 NOMADS
+            h2.nomads-header Productos
+            .nomads-container
+                aside.search
+                    .search-byname
+                        input(type="text" placeholder="Buscar por nombre")
+                        .icon-Buscar
+                    .search-byprice
+                        .search-byprice__header
+                            span Precio $
+                            .icon-Flecha-Dropdown
+                        form
+                            input(type="number" placeholder="Monto mínimo")
+                            input(type="number" placeholder="Monto máximo")
+                            button aplicar filtro
+                    .search-bycategory
+                        .search-bycategory__header
+                            span Categoría
+                            .icon-Flecha-Dropdown
+                        - const categories = ["Backpack", "Carteras", "Purses", "Coalas"]
+                        .search-bycategory__checklist
+                            form
+                                each category, index in categories
+                                    +inputGroup(category, index)
+                - const products = [{img: "cirrus.png", name: "Cirrus", price: "250"}, {img: "cumulus.png", name: "Cumulus", price: "195"}, {img: "dbn.png", name: "Dance bag nylon", price: "200"}, {img: "mini-circle.png", name: "Mini circle", price: "135"}, {img: "gallery.png", name: "Stratus backpack", price: "250"}, {img: "sbv.png", name: "Studio bag vaqueta", price: "195"}, {img: "sling.png", name: "Sling", price: "125"}, {img: "studio-bag.png", name: "Studio bag", price: "135"}]
+                .nomads-container__products
+                    each product in products
+                        +product(product)

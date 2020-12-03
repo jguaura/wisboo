@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  color: #262628;
+}
+
+.dashboard {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 283px auto 414px;
+}
+.dashboard-menu {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+  border-right: 1px solid #d4d8e1;
+}
+.dashboard-menu__logo {
+  display: flex;
+  justify-content: center;
+  margin: 68px 0 58px 0;
+}
+.dashboard-menu__nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 61px;
+}
+.dashboard-menu__nav nav {
+  width: 222px;
+}
+.dashboard-menu__nav nav ul {
+  list-style: none;
+}
+.dashboard-menu__nav nav ul li {
+  height: 59px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+.dashboard-menu__nav nav ul li:last-of-type {
+  margin-bottom: 0;
+}
+.dashboard-menu__nav nav ul li a {
+  font-size: 18px;
+  color: #9693a1;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.dashboard-menu__nav nav ul li a i {
+  font-size: 20px;
+  margin-left: 16px;
+  margin-right: 20px;
+}
+.dashboard-menu__nav nav ul li.active {
+  background-color: #262628;
+  color: #fff;
+}
+.dashboard-menu__nav nav ul li.active a {
+  color: inherit;
+}
+.dashboard-menu__nav nav ul li.active a i {
+  color: inherit;
+}
+.dashboard-menu__card {
+  width: 222px;
+  height: 255px;
+  background-color: #262628;
+  border-radius: 10px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+.dashboard-menu__card .card-header h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin: 27px 0 22px 0;
+}
+.dashboard-menu__card .card-img {
+  position: relative;
+  z-index: 1;
+  top: -1px;
+}
+.dashboard-menu__card .card-img img {
+  width: 166px;
+  height: 155px;
+}
+.dashboard-menu__card .card-cta {
+  font-family: "Open Sans", sans-serif;
+  background-color: #65676d;
+  height: 59px;
+  width: 170px;
+  margin: 0 auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -30px;
+  cursor: pointer;
+}
+.dashboard-menu__card .card-cta__wrapper {
+  position: relative;
+  background-color: #65676d;
+  z-index: 3;
+}
+.dashboard-menu__card .card-cta__wrapper h4 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+.dashboard-main {
+  padding: 0 30px 0 29px;
+}
+.dashboard-reports {
+  border-left: 1px solid #d4d8e1;
+  padding: 0 30px;
+}
+
+/*# sourceMappingURL=dashboard.style.css.map */
