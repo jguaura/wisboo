@@ -1,4 +1,4 @@
-@import "_global.scss";
+@import "../_global.scss";
 
 .product {
   * {
@@ -8,7 +8,7 @@
     @include navbar;
   }
   &-container {
-    width: 1152px;
+    width: 1185px;
     display: flex;
     margin: 0 auto;
     padding-bottom: 80px;
@@ -21,14 +21,14 @@
     }
     &__description {
       padding-left: 100px;
-      padding-top: 60px;
+      padding-top: 62px;
       flex: 1;
       .product-description {
         &__header {
           h2 {
             font-size: 30px;
             font-weight: 700;
-            margin: 15px 0 30px 0;
+            margin: 22px 0 35px 0;
           }
           h3 {
             font-size: 25px;
@@ -40,6 +40,9 @@
           flex-direction: column;
           button {
             @include button;
+            width: 82%;
+            max-width: 90%;
+            height: 42px;
             margin-bottom: 13px;
             &:last-of-type {
               margin: 0;
@@ -47,11 +50,12 @@
           }
         }
         &__text {
-          max-width: 324px;
+          max-width: 91%;
           padding: 30px 0 0 0;
           p {
             font-size: 15px;
             font-weight: normal;
+            line-height: 20px;
           }
         }
       }

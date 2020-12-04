@@ -1,0 +1,169 @@
+mixin navItem (content, icon, active)
+    li(class=`${active ? "active" : ""}`)
+        a(href="#")
+            i(class=`${icon}`)
+            = content
+
+mixin gaugeItem ({title, date, percentage})
+    .item
+        .item-text
+            h5= title
+            span= date
+        .item-gauge
+            .outer
+                .inner= percentage
+
+mixin cardInfo()
+    span Balance
+    h4 $8,678.87
+    .card-numbers
+        span 5894
+        span 6985
+        span 7843
+        span 5624
+    .card-date
+        span 08/22
+        .card-date__circles
+            .circle
+            .circle.oval
+            .circle
+
+mixin line(arg)
+    section(class=`${parseInt(arg) === 1 ? "line" : ("line" + " " + "l-"+arg)}`)
+
+doctype html
+html
+    head
+        title Dashboard
+        link(rel="preconnect", href="https://fonts.gstatic.com")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;0,700;1,400&display=swap")
+        link(rel="stylesheet", href="https://2.cdn.wisboo.com/fonts/icons-wisboo/style.css")
+        link(rel="stylesheet", href="../../styles/css/dashboard/dashboard.style.css")
+    body
+        .dashboard
+            aside.dashboard-menu
+                .dashboard-menu__logo
+                    img(src="../../assets/logo.png")
+                .dashboard-menu__nav
+                    nav
+                        ul
+                            +navItem("Dashboard", "icon-apps---material", "active")
+                            +navItem("Cards", "icon-credit_card---material")
+                            +navItem("Statistics", "icon-poll---material")
+                            +navItem("Premium", "icon-bookmark---material")
+                            +navItem("Profile", "icon-Usuario")
+                            +navItem("Settings", "icon-Configuracion-Relleno")
+                .dashboard-menu__card
+                    .card-header
+                        h4.
+                            Use our Premium #[br]
+                            features now
+                    .card-img
+                        img(src="../../assets/car.png")
+                    .card-cta
+                        .card-cta__wrapper
+                            h4 Get premium
+            main.dashboard-main
+                header.dashboard-main__header
+                    .header-text
+                        h1 Hello, Nikky
+                        span Welcome back!
+                    .header-search
+                        i.icon-Buscar
+                        input(type="text", placeholder="Search")
+                section.dashboard-main__hero
+                    .hero-text
+                        h2.
+                            Transfer money #[br]
+                            to Your Bank
+                        .hero-text__circles
+                            .circle
+                                .card
+                                    .band
+                                    .square
+                            .circle
+                                .shapes
+                                    .shape.s-1
+                                    .shape.s-2
+                                    .shape.s-3
+                    .hero-img
+                        img(src="../../assets/beach.png")
+                        .hero-img__filter
+                .dashboard-main__reports
+                    .gauge
+                        h3 Reports
+                        -const items = [{title: "Utility", date: "01 Apr. 1:30pm", percentage: "50%"}, {title: "Transfered", date: "10 Apr. 1:30pm", percentage: "25%"}, {title: "Food", date: "15 Apr. 4:30pm", percentage: "15%"}, {title: "Beauty", date: "15 Apr. 7:30pm", percentage: "10%"}]
+                        .gauge-items
+                            each item in items
+                                +gaugeItem(item)
+                    .cards
+                        .card
+                            +cardInfo()
+                        .card
+                            +cardInfo()
+            section.dashboard-reports
+                header.dashboard-reports__header
+                    .box
+                        .box-icon
+                            i.icon-Envelope
+                            .box-icon__circle
+                    .box
+                        img(src="../../assets/profile.png")
+                .dashboard-reports__graphs
+                    .graphs-header
+                        h5 Reports
+                        .graphs-header__select
+                            span Month
+                            i.icon-Flecha-Dropdown
+                    .graphs-lines
+                        .graphs-lines__left
+                            .box.box-1
+                                span 20k
+                                span 15k
+                            .box.box-2
+                                span 10k
+                                span 5k
+                            .box.box-3
+                                span.last 0k
+                        .wrapper
+                            -const arr = Array(9).fill(" ")
+                            .graphs-lines__box
+                                each item, index in arr
+                                    +line(`${index + 1}`)
+                            -const arr2 = Array(11).fill(" ")
+                            .graphs-lines__box.b-1
+                                each item, index in arr2
+                                        +line(`${index + 2}`)
+                            -const arr3 = Array(11).fill(" ")
+                            .graphs-lines__box.b-2
+                                each item, index in arr2
+                                    +line(`${index + 2}`)
+                            .graphs-lines__months
+                                ul
+                                    li
+                                        a(href="#") Jan
+                                    li
+                                        a(href="#") Feb
+                                    li
+                                        a(href="#") Mar
+                                    li.active
+                                        a(href="#") Apr
+                                    li
+                                        a(href="#") May
+                                    li
+                                        a(href="#") Jun
+                .dashboard-reports__gauge
+                    .outer-gauge
+                        .inner-gauge
+                            h3 85
+                                span %
+                    .detail
+                        .detail-item.i-1
+                            span Utility
+                            span $ 847.00
+                        .detail-item.i-2
+                            span Taxi
+                            span $ 586.50
+                        .detail-item.i-3
+                            span Food
+                            span $ 685.50

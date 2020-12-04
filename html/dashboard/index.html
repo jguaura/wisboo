@@ -5,7 +5,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;0,700;1,400&amp;display=swap">
     <link rel="stylesheet" href="https://2.cdn.wisboo.com/fonts/icons-wisboo/style.css">
-    <link rel="stylesheet" href="../../styles/dashboard.style.css">
+    <link rel="stylesheet" href="../../styles/css/dashboard/dashboard.style.css">
   </head>
   <body>
     <div class="dashboard">
@@ -16,7 +16,7 @@
             <ul>
               <li class="active"><a href="#"><i class="icon-apps---material"></i>Dashboard</a></li>
               <li><a href="#"><i class="icon-credit_card---material"></i>Cards</a></li>
-              <li><a href="#"><i class="icon-poll---material"></i>Statics</a></li>
+              <li><a href="#"><i class="icon-poll---material"></i>Statistics</a></li>
               <li><a href="#"><i class="icon-bookmark---material"></i>Premium</a></li>
               <li><a href="#"><i class="icon-Usuario"></i>Profile</a></li>
               <li><a href="#"><i class="icon-Configuracion-Relleno"></i>Settings</a></li>
@@ -38,10 +38,194 @@
         </div>
       </aside>
       <main class="dashboard-main">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sit dolore iusto similique labore itaque nesciunt quisquam officia? Nulla, praesentium.</p>
+        <header class="dashboard-main__header">
+          <div class="header-text">
+            <h1>Hello, Nikky</h1><span>Welcome back!</span>
+          </div>
+          <div class="header-search"><i class="icon-Buscar"></i>
+            <input type="text" placeholder="Search">
+          </div>
+        </header>
+        <section class="dashboard-main__hero">
+          <div class="hero-text">
+            <h2>Transfer money <br>
+              to Your Bank
+            </h2>
+            <div class="hero-text__circles">
+              <div class="circle">
+                <div class="card">
+                  <div class="band"></div>
+                  <div class="square"></div>
+                </div>
+              </div>
+              <div class="circle">
+                <div class="shapes">
+                  <div class="shape s-1"></div>
+                  <div class="shape s-2"></div>
+                  <div class="shape s-3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-img"><img src="../../assets/beach.png">
+            <div class="hero-img__filter"></div>
+          </div>
+        </section>
+        <div class="dashboard-main__reports">
+          <div class="gauge">
+            <h3>Reports</h3>
+            <div class="gauge-items">
+              <div class="item">
+                <div class="item-text">
+                  <h5>Utility</h5><span>01 Apr. 1:30pm</span>
+                </div>
+                <div class="item-gauge">
+                  <div class="outer">
+                    <div class="inner">50%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-text">
+                  <h5>Transfered</h5><span>10 Apr. 1:30pm</span>
+                </div>
+                <div class="item-gauge">
+                  <div class="outer">
+                    <div class="inner">25%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-text">
+                  <h5>Food</h5><span>15 Apr. 4:30pm</span>
+                </div>
+                <div class="item-gauge">
+                  <div class="outer">
+                    <div class="inner">15%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-text">
+                  <h5>Beauty</h5><span>15 Apr. 7:30pm</span>
+                </div>
+                <div class="item-gauge">
+                  <div class="outer">
+                    <div class="inner">10%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card"><span>Balance</span>
+              <h4>$8,678.87</h4>
+              <div class="card-numbers"><span>5894</span><span>6985</span><span>7843</span><span>5624</span></div>
+              <div class="card-date"><span>08/22</span>
+                <div class="card-date__circles">
+                  <div class="circle"></div>
+                  <div class="circle oval"></div>
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+            <div class="card"><span>Balance</span>
+              <h4>$8,678.87</h4>
+              <div class="card-numbers"><span>5894</span><span>6985</span><span>7843</span><span>5624</span></div>
+              <div class="card-date"><span>08/22</span>
+                <div class="card-date__circles">
+                  <div class="circle"></div>
+                  <div class="circle oval"></div>
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
       <section class="dashboard-reports">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit mollitia ipsam nostrum, dolore a adipisci asperiores, beatae corrupti quidem officia facere laudantium, quis tenetur quaerat quas? Iusto, id nemo? Eum explicabo vero assumenda voluptas deleniti magni ratione ducimus cumque excepturi.</p>
+        <header class="dashboard-reports__header">
+          <div class="box">
+            <div class="box-icon"><i class="icon-Envelope"></i>
+              <div class="box-icon__circle"></div>
+            </div>
+          </div>
+          <div class="box"><img src="../../assets/profile.png"></div>
+        </header>
+        <div class="dashboard-reports__graphs">
+          <div class="graphs-header">
+            <h5>Reports</h5>
+            <div class="graphs-header__select"><span>Month</span><i class="icon-Flecha-Dropdown"></i></div>
+          </div>
+          <div class="graphs-lines">
+            <div class="graphs-lines__left">
+              <div class="box box-1"><span>20k</span><span>15k</span></div>
+              <div class="box box-2"><span>10k</span><span>5k</span></div>
+              <div class="box box-3"><span class="last">0k</span></div>
+            </div>
+            <div class="wrapper">
+              <div class="graphs-lines__box">
+                <section class="line"></section>
+                <section class="line l-2"></section>
+                <section class="line l-3"></section>
+                <section class="line l-4"></section>
+                <section class="line l-5"></section>
+                <section class="line l-6"></section>
+                <section class="line l-7"></section>
+                <section class="line l-8"></section>
+                <section class="line l-9"></section>
+              </div>
+              <div class="graphs-lines__box b-1">
+                <section class="line l-2"></section>
+                <section class="line l-3"></section>
+                <section class="line l-4"></section>
+                <section class="line l-5"></section>
+                <section class="line l-6"></section>
+                <section class="line l-7"></section>
+                <section class="line l-8"></section>
+                <section class="line l-9"></section>
+                <section class="line l-10"></section>
+                <section class="line l-11"></section>
+                <section class="line l-12"></section>
+              </div>
+              <div class="graphs-lines__box b-2">
+                <section class="line l-2"></section>
+                <section class="line l-3"></section>
+                <section class="line l-4"></section>
+                <section class="line l-5"></section>
+                <section class="line l-6"></section>
+                <section class="line l-7"></section>
+                <section class="line l-8"></section>
+                <section class="line l-9"></section>
+                <section class="line l-10"></section>
+                <section class="line l-11"></section>
+                <section class="line l-12"></section>
+              </div>
+              <div class="graphs-lines__months">
+                <ul>
+                  <li><a href="#">Jan</a></li>
+                  <li><a href="#">Feb</a></li>
+                  <li><a href="#">Mar</a></li>
+                  <li class="active"><a href="#">Apr</a></li>
+                  <li><a href="#">May</a></li>
+                  <li><a href="#">Jun</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard-reports__gauge">
+          <div class="outer-gauge">
+            <div class="inner-gauge">
+              <h3>85<span>%</span></h3>
+            </div>
+          </div>
+          <div class="detail">
+            <div class="detail-item i-1"><span>Utility</span><span>$ 847.00</span></div>
+            <div class="detail-item i-2"><span>Taxi</span><span>$ 586.50</span></div>
+            <div class="detail-item i-3"><span>Food</span><span>$ 685.50</span></div>
+          </div>
+        </div>
       </section>
     </div>
   </body>
